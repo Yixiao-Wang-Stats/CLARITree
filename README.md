@@ -130,3 +130,7 @@ python scripts/images/main_teaser.py
 python scripts/images/plot_completion_rate.py
 python scripts/images/plot_linear.py
 ```
+
+## License
+
+CLARITree is released under the [MIT License](LICENSE).

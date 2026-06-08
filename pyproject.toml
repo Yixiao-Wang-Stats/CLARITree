@@ -5,6 +5,8 @@ build-backend = "scikit_build_core.build"
 [project]
 name = "clari-tree"
 version = "0.1.0"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.9"
 dependencies = [
     "numpy>=1.22",
