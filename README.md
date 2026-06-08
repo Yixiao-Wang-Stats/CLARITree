@@ -8,18 +8,11 @@ This repository contains the code and experiment artifacts for the ICML 2026 pap
 
 CLARITree requires Python 3.9+, CMake, a C++17 compiler, and Eigen 3.
 
-On Ubuntu:
-
-```bash
-sudo apt-get update
-sudo apt-get install -y build-essential cmake libeigen3-dev python3-venv
-```
-
 Clone the repository:
 
 ```bash
-git clone https://github.com/HaydenMcT/split-regression.git
-cd split-regression
+git clone https://github.com/Yixiao-Wang-Stats/CLARITree.git
+cd CLARITree
 ```
 
 ## C++ Demo
@@ -39,7 +32,7 @@ make test
 This compiles `run_tree` and runs it on one of the included datasets. You can also call it directly:
 
 ```bash
-./run_tree data/airfoil/airfoil_continuous.csv 4.0 0.001 0.001 20 quantile
+./run_tree data/airfoil/splits/outer_0/train.csv 4.0 0.001 0.001 20 quantile
 ```
 
 The command-line interface is:
@@ -51,7 +44,7 @@ The command-line interface is:
 - `depth`: maximum tree depth.
 - `lambda`: tree-complexity penalty.
 - `kappa`: ridge penalty for the linear models in the leaves.
-- `n_thresholds`: candidate split thresholds per feature; defaults to `1`.
+- `n_thresholds`: candidate split thresholds per feature.
 - `thresholds_strategy`: `quantile` or `uniform`; defaults to `quantile`.
 
 The executable creates a reproducible 80/20 train/test split and reports MSE, R2, and runtime for both Greedy and CLARITree. CSV files may have a header and must otherwise be numeric. The target is read from the final column, except for filenames containing `targetfirst`, where it is read from the first column.
@@ -100,10 +93,10 @@ data = pd.read_csv("data/airfoil/splits/outer_0/train.csv").to_numpy(float)
 X, y = data[:, :-1], data[:, -1]
 
 model = CLARITree(
-    depth=2,
+    depth=4,
     lambda_=0.001,
     kappa=0.001,
-    n_thresholds=5,
+    n_thresholds=20,
     thresholds_strategy="quantile",
     min_leaf_node_size=0,
 )

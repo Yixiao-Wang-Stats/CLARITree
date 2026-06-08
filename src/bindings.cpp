@@ -74,7 +74,7 @@ PYBIND11_MODULE(_core, m) {
                py::arg("kappa"),
                py::arg("depth"),
                py::arg("lambda_") = 0.0,
-               py::arg("n_thresholds") = 1,
+               py::arg("n_thresholds") = 20,
                py::arg("thresholds_strategy") = "quantile",
                py::arg("verbose") = true,
                py::arg("min_leaf_node_size") = 0)
@@ -92,7 +92,7 @@ PYBIND11_MODULE(_core, m) {
                    py::arg("kappa"),
                    py::arg("depth"),
                    py::arg("lambda_") = 0.0,
-                   py::arg("n_thresholds") = 1,
+                   py::arg("n_thresholds") = 20,
                    py::arg("thresholds_strategy") = "quantile",
                    py::arg("verbose") = true,
                    py::arg("min_leaf_node_size") = 0)
@@ -108,7 +108,7 @@ PYBIND11_MODULE(_core, m) {
     greedy_const.def(py::init<int, double, int, const std::string&, bool, int>(),
                      py::arg("depth"),
                      py::arg("lambda_") = 0.0,
-                     py::arg("n_thresholds") = 1,
+                     py::arg("n_thresholds") = 20,
                      py::arg("thresholds_strategy") = "quantile",
                      py::arg("verbose") = true,
                      py::arg("min_leaf_node_size") = 1)
@@ -124,7 +124,7 @@ PYBIND11_MODULE(_core, m) {
     clari_tree_const.def(py::init<int, double, int, const std::string&, bool, int>(),
                          py::arg("depth"),
                          py::arg("lambda_") = 0.0,
-                         py::arg("n_thresholds") = 1,
+                         py::arg("n_thresholds") = 20,
                          py::arg("thresholds_strategy") = "quantile",
                          py::arg("verbose") = true,
                          py::arg("min_leaf_node_size") = 1)
