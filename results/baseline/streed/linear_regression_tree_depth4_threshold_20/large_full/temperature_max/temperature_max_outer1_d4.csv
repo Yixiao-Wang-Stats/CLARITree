@@ -1,0 +1,2 @@
+dataset,outer,method,depth,n_thresholds,lambda,cost_complexity,ridge_penalty,lasso_penalty,time_limit_s,val_r2,val_mse,train_time_s,train_mse,train_r2,test_mse,test_r2,n_leaves
+temperature_max,outer_1,streed,4,20,,0.0001,0.01,0.001,230400.0,0.8246088782256585,1.7028130936184165,230399.7859828472,1.0705716147794981,0.8901266138196973,1.2832594405429163,0.8660596141383463,16

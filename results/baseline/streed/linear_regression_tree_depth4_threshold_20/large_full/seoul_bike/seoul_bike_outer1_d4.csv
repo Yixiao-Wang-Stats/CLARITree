@@ -1,0 +1,2 @@
+dataset,outer,method,depth,n_thresholds,lambda,cost_complexity,ridge_penalty,lasso_penalty,time_limit_s,val_r2,val_mse,train_time_s,train_mse,train_r2,test_mse,test_r2,n_leaves
+seoul_bike,outer_1,streed,4,20,,0.005,0.001,0.1,230400.0,0.6923386851156927,127729.5612827384,64063.60807824135,109303.0447028935,0.741062097421963,122596.63806750499,0.6857433050719735,9

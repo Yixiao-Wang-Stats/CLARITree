@@ -1,0 +1,2 @@
+dataset,outer,method,depth,n_thresholds,lambda,cost_complexity,ridge_penalty,lasso_penalty,time_limit_s,val_r2,val_mse,train_time_s,train_mse,train_r2,test_mse,test_r2,n_leaves
+california_housing,outer_3,streed,4,20,,0.0001,1e-05,0.001,230400.0,0.7153275999946037,3792814426.0788503,230399.647449255,3062868764.063695,0.7673543785958955,3332762099.9854345,0.7610937926141035,16

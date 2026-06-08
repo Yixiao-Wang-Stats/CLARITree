@@ -1,0 +1,2 @@
+dataset,outer,method,depth,n_thresholds,lambda,cost_complexity,ridge_penalty,lasso_penalty,time_limit_s,val_r2,val_mse,train_time_s,train_mse,train_r2,test_mse,test_r2,n_leaves
+walmart,outer_1,streed,4,20,,0.005,1e-05,0.001,230400.0,0.2020662598920003,254006200160.206,1743.8429052829742,229657392779.11343,0.2744786831580005,268690936623.52603,0.17546398328481738,16
