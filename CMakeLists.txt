@@ -60,5 +60,13 @@ target_include_directories(sr_py PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set_target_properties(sr_py  PROPERTIES
   OUTPUT_NAME "_core"
-  LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/clari_tree"
+)
+
+install(TARGETS sr_py
+  LIBRARY DESTINATION clari_tree
+  RUNTIME DESTINATION clari_tree
+)
+
+install(FILES clari_tree/__init__.py
+  DESTINATION clari_tree
 )

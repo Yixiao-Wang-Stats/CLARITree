@@ -2,9 +2,30 @@
 
 This repository contains the code and experiment artifacts for the ICML 2026 paper **"CLARITree: Cholesky and Lookahead Accelerations for Regression with Interpretable Piecewise Linear Trees."**
 
-[![CLARITree teaser](results/images/teaser_new.png)](results/images/teaser_new.pdf)
+[![CLARITree teaser](https://raw.githubusercontent.com/Yixiao-Wang-Stats/CLARITree/main/results/images/teaser_new.png)](https://github.com/Yixiao-Wang-Stats/CLARITree/blob/main/results/images/teaser_new.pdf)
 
-## Requirements
+## Installation
+
+Install the released Python package with:
+
+```bash
+pip install claritree
+```
+
+The PyPI distribution is named `claritree`; the Python import package remains
+`clari_tree`:
+
+```python
+from clari_tree import CLARITree
+```
+
+To use the dataframe-based example, install the optional example dependencies:
+
+```bash
+pip install "claritree[examples]"
+```
+
+## Source Requirements
 
 CLARITree requires Python 3.9+, CMake, a C++17 compiler, and Eigen 3.
 

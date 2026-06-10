@@ -3,24 +3,45 @@ requires = ["scikit-build-core>=0.11", "pybind11[global]>=2.12", "numpy>=1.22"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "clari-tree"
+name = "claritree"
 version = "0.1.0"
+description = "CLARITree: optimal regression trees with C++ backend"
+readme = "README.md"
+authors = [
+    { name = "Yixiao Wang" }
+]
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.9"
 dependencies = [
-    "numpy>=1.22",
-    "pandas>=1.0.0",
-    "scikit-learn>=1.2.0",
-    "tqdm",
-    "optuna"
+    "numpy>=1.22"
 ]
 
-[tool.scikit_build]
+[project.optional-dependencies]
+examples = [
+    "pandas>=1.0.0",
+    "scikit-learn>=1.2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/Yixiao-Wang-Stats/CLARITree"
+Repository = "https://github.com/Yixiao-Wang-Stats/CLARITree"
+Issues = "https://github.com/Yixiao-Wang-Stats/CLARITree/issues"
+
+[tool.scikit-build]
 build-dir = "build/{wheel_tag}"
 wheel.packages = ["clari_tree"]
+sdist.exclude = [
+    "data/**",
+    "results/**",
+    "scripts/**",
+    "test/**",
+    "PILOT/**",
+    "Makefile",
+    "rebuild_clari_tree.sh"
+]
 
-[tool.scikit_build.cmake]
+[tool.scikit-build.cmake]
 build-type = "Release"
 args = [
     "-DCMAKE_CXX_STANDARD=17"
