@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "claritree"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLARITree: optimal regression trees with C++ backend"
 readme = "README.md"
 authors = [
