@@ -82,3 +82,4 @@ scripts/images/*
 !scripts/images/main_teaser.py
 !scripts/images/plot_completion_rate.py
 !scripts/images/plot_linear.py
+check_pypi_upload.sh

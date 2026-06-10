@@ -126,6 +126,8 @@ source /tmp/claritree-testpypi/bin/activate
 python -m pip install numpy
 python -m pip install --index-url https://test.pypi.org/simple/ --no-deps claritree
 python -c "from clari_tree import CLARITree; print(CLARITree)"
+deactivate
+source .release-venv/bin/activate
 ```
 
 ## 7. Upload to PyPI
